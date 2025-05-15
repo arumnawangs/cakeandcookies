@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arum Cake and Cookies</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #fef7f1, #ffe7cc);
+      color: #333;
+      line-height: 1.5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #f47c20;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 10%;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #f47c20;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    .hero-img {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .hero-img img {
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+      max-width: 100%;
+    }
+
+    .section {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 15px;
+      width: 260px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card.active {
+      transform: scale(1.2);
+      z-index: 2;
+    }
+
+    .rating {
+      color: #f4a000;
+      font-weight: bold;
+    }
+
+    .price {
+      color: #f47c20;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .whatsapp-button {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .whatsapp-button a {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .footer {
+      background: #fef0dd;
+      padding: 30px 10%;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      color: #555;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 30px 5%;
+      }
+
+      .feature {
+        flex-direction: column;
+        padding: 30px 5%;
+      }
+
+      header {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-img img {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ARUM CAKE</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Kue Lezat Menantimu</h1>
+      <p>Kue & cookies homemade, dibuat dari bahan pilihan dan penuh cinta.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Lihat Menu</button>
+        <button class="btn-secondary">Pesan Sekarang</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="hero.png" alt="Foto Kue Utama">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top List</h2>
+    <p>Menu andalan kami</p>
+    <div class="cards">
+      <div class="card" data-name="Cottoncandy Cake">
+        <img src="menu1.png" alt="Cottoncandy Cake">
+        <div class="rating">⭐ 8.5</div>
+        <h3>Cottoncandy Cake</h3>
+        <p>Lembut seperti kapas dengan rasa manis yang memikat</p>
+        <div class="price">Rp20.000</div>
+      </div>
+      <div class="card" data-name="Strawberry Shortcake">
+        <img src="menu2.png" alt="Strawberry Shortcake">
+        <div class="rating">⭐ 9.2</div>
+        <h3>Strawberry Shortcake</h3>
+        <p>Kue lembut berlapis krim dan potongan stroberi segar</p>
+        <div class="price">Rp25.000</div>
+      </div>
+      <div class="card" data-name="Strawberry Sprinkles Cake">
+        <img src="menu3.png" alt="Strawberry Sprinkles Cake">
+        <div class="rating">⭐ 8.8</div>
+        <h3>Strawberry Sprinkles Cake</h3>
+        <p>Kue ceria dengan taburan sprinkle dan rasa stroberi</p>
+        <div class="price">Rp22.000</div>
+      </div>
+    </div>
+    <div class="whatsapp-button" id="waButton">
+      <a href="#" id="waLink" target="_blank">WhatsApp Sekarang</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h3>Layanan Kami</h3>
+    <div class="services">
+      <div>📱 Booking Online</div>
+      <div>🍱 Catering</div>
+      <div>🎁 Membership</div>
+      <div>🚚 Delivery</div>
+    </div>
+    <p>Alamat: Plandongan Dua, Losari, Ampelgading, Pemalang, Jawa Tengah 52364<br>
+    Telp: 0877-3357-5053</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const waButton = document.getElementById('waButton');
+    const waLink = document.getElementById('waLink');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        const namaKue = card.dataset.name;
+        const pesan = `Halo, saya ingin memesan *${namaKue}*. Apakah masih tersedia?`;
+        waLink.href = `https://api.whatsapp.com/send?phone=6287733575053&text=${encodeURIComponent(pesan)}`;
+        waButton.style.display = 'block';
+        waButton.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
